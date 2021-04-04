@@ -1,0 +1,43 @@
+# git ignores...
+.#*
+*.o
+**~
+# Eclipse/CDT Cevelop configuration
+# Generated code: /Debug/
+/.settings/
+.cproject*
+.project*
+.directory*
+.gitignore.*
+.gitignore-*
+.gitignore_*
+
+/intersect
+/filter
+/cute/
+/example
+/test.xml
+/.DS_Store
+/.cproject~
+/tmp.out
+/cute/
+/cute
+/Makefile-Linux
+/Makefile
+/build
+/build1-*
+build-1
+/lookup
+/lookupInteractive
+/tesselateTrapezoid
+/tests.xml
+
+# now that STARE.h is a generated file, don't including it in git
+/include/STARE.h
+
+*.pyc
+\#*#
+/Testing/
+/test.st
+/test1.st
+/test2.st

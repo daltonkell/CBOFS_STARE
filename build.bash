@@ -18,12 +18,13 @@ WFLAGS="-Wall -Wpedantic"
 DEBUG="-g -ggdb"
 
 #  Compile:
-if [[ "$HAVE_OMP" -eq 1 ]]; then
-    echo "Building with OpenMP..."
+if [[ "$HAVE_OMP" -ne 1 ]]; then
+    echo "Building without OpenMP..."
     # This will give you a warning about ignored OMP pragmas
     g++ $CPPFLAGS $WFLAGS $DEBUG $CFLAGS $LDFLAGS -std=c++11 -o a.out CBOFS_STARE.cpp -lnetcdf -lSTARE
 else
     # If using OMP, need to compile with -fopenmp then link
+    echo "Building with OpenMP..."
     g++ $CPPFLAGS $WFLAGS $DEBUG $CFLAGS $CFLAGS $CXXFLAGS -c CBOFS_STARE.cpp -o CBOFS_STARE.o -fopenmp
     g++ $CPPFLAGS $WFLAGS $DEBUG $CFLAGS $LDFLAGS $CXXFLAGS CBOFS_STARE.o -o a.out -fopenmp -lpthread -lnetcdf -lSTARE
 fi

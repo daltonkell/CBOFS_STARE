@@ -78,7 +78,7 @@ that the `STARE` indices are coirrectly computed.
 ## Challenges
 
 1. Grid transformations: Since the CBOFS grid(s) is(are) curvilinear, there are
-some funky transformations going on. Is theis the reason why some of the land cells
+some funky transformations going on. Is this the reason why some of the land cells
 are being shown, even when using the land mask? This seems to be more of a visualization
 caveat than a `STARE` concern.
 
